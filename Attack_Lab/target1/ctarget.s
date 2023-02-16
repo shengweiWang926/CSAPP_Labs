@@ -774,7 +774,7 @@ Disassembly of section .text:
   4017a6:	90                   	nop
   4017a7:	90                   	nop
 
-00000000004017a8 <getbuf>:
+00000000004017a8 <getbuf>: //
   4017a8:	48 83 ec 28          	sub    $0x28,%rsp
   4017ac:	48 89 e7             	mov    %rsp,%rdi
   4017af:	e8 8c 02 00 00       	callq  401a40 <Gets>
@@ -795,7 +795,7 @@ Disassembly of section .text:
   4017e2:	bf 00 00 00 00       	mov    $0x0,%edi
   4017e7:	e8 54 f6 ff ff       	callq  400e40 <exit@plt>
 
-00000000004017ec <touch2>:
+00000000004017ec <touch2>: //
   4017ec:	48 83 ec 08          	sub    $0x8,%rsp
   4017f0:	89 fa                	mov    %edi,%edx
   4017f2:	c7 05 e0 2c 20 00 02 	movl   $0x2,0x202ce0(%rip)        # 6044dc <vlevel>
@@ -818,7 +818,7 @@ Disassembly of section .text:
   401842:	bf 00 00 00 00       	mov    $0x0,%edi
   401847:	e8 f4 f5 ff ff       	callq  400e40 <exit@plt>
 
-000000000040184c <hexmatch>:
+000000000040184c <hexmatch>: //
   40184c:	41 54                	push   %r12
   40184e:	55                   	push   %rbp
   40184f:	53                   	push   %rbx
@@ -869,7 +869,7 @@ Disassembly of section .text:
   4018f7:	41 5c                	pop    %r12
   4018f9:	c3                   	retq   
 
-00000000004018fa <touch3>:
+00000000004018fa <touch3>: //
   4018fa:	53                   	push   %rbx
   4018fb:	48 89 fb             	mov    %rdi,%rbx
   4018fe:	c7 05 d4 2b 20 00 03 	movl   $0x3,0x202bd4(%rip)        # 6044dc <vlevel>
@@ -897,7 +897,7 @@ Disassembly of section .text:
   40195e:	bf 00 00 00 00       	mov    $0x0,%edi
   401963:	e8 d8 f4 ff ff       	callq  400e40 <exit@plt>
 
-0000000000401968 <test>:
+0000000000401968 <test>: // 
   401968:	48 83 ec 08          	sub    $0x8,%rsp
   40196c:	b8 00 00 00 00       	mov    $0x0,%eax
   401971:	e8 32 fe ff ff       	callq  4017a8 <getbuf>
@@ -966,11 +966,11 @@ Disassembly of section .text:
   401a36:	bf 01 00 00 00       	mov    $0x1,%edi
   401a3b:	e8 00 f4 ff ff       	callq  400e40 <exit@plt>
 
-0000000000401a40 <Gets>:
+0000000000401a40 <Gets>: //
   401a40:	41 54                	push   %r12
   401a42:	55                   	push   %rbp
   401a43:	53                   	push   %rbx
-  401a44:	49 89 fc             	mov    %rdi,%r12
+  401a44:	49 89 fc             	mov    %rdi,%r12 
   401a47:	c7 05 b3 36 20 00 00 	movl   $0x0,0x2036b3(%rip)        # 605104 <gets_cnt>
   401a4e:	00 00 00 
   401a51:	48 89 fb             	mov    %rdi,%rbx
@@ -1264,7 +1264,7 @@ Disassembly of section .text:
   401f10:	c7 05 c2 25 20 00 00 	movl   $0x0,0x2025c2(%rip)        # 6044dc <vlevel>
   401f17:	00 00 00 
   401f1a:	b8 00 00 00 00       	mov    $0x0,%eax
-  401f1f:	e8 44 fa ff ff       	callq  401968 <test>
+  401f1f:	e8 44 fa ff ff       	callq  401968 <test> // 
   401f24:	83 3d bd 25 20 00 00 	cmpl   $0x0,0x2025bd(%rip)        # 6044e8 <is_checker>
   401f2b:	74 14                	je     401f41 <launch+0x8d>
   401f2d:	bf c1 32 40 00       	mov    $0x4032c1,%edi

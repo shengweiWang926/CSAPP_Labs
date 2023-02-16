@@ -774,7 +774,7 @@ Disassembly of section .text:
   4017a6:	90                   	nop
   4017a7:	90                   	nop
 
-00000000004017a8 <getbuf>:
+00000000004017a8 <getbuf>: // 
   4017a8:	48 83 ec 28          	sub    $0x28,%rsp
   4017ac:	48 89 e7             	mov    %rsp,%rdi
   4017af:	e8 ac 03 00 00       	callq  401b60 <Gets>

