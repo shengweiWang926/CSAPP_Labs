@@ -53,8 +53,10 @@ Cache initCache (int setIndexBits, int assoc) {
 
     for (int i = 0; i < setNum; i++){
         for (int j = 0; j < assoc; j++){
-            cache[i][j].valid = 0;
-            cache[i][j].lru_counter = 0;
+            // cache[i][j].valid = 0;
+            // cache[i][j].lru_counter = 0;
+            ((*(cache+i))+j)->valid = 0;
+            ((*(cache+i))+j)->lru_counter =0;
         }
     }
     
@@ -263,5 +265,7 @@ int main(int argc, char *argv[]) {
     }
 
     printSummary(hit_count, miss_count, eviction_count);
+
+    free(cache);
     return 0;
 }

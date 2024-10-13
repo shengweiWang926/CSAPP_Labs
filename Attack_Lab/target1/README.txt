@@ -26,3 +26,13 @@ can compile (use flag -Og) and disassemble it to look for gadgets.
 Utility program to generate byte sequences.  See documentation in lab
 handout.
 
+Notices:
+
+when running executables ./ctarget and ./rtarget
+
+Include the -q flag which prevents program from contacting non-existent grading server in addition to the above error.
+
+For example:
+
+$ ./ctarget -q
+
